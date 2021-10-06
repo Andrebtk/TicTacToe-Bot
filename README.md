@@ -4,6 +4,6 @@ Implementation of a game of tictactoe, where you can play against an AI powered 
 
 
 ## Installation :
-'''bash
+```bash
 pip install -r requirements.txt
-'''
+```
