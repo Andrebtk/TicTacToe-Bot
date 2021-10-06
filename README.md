@@ -7,3 +7,8 @@ Implementation of a game of tictactoe, where you can play against an AI powered 
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage:
+```bash
+python3 runner.py
+```
