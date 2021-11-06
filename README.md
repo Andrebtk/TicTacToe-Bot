@@ -3,7 +3,7 @@
 Implementation of a game of tictactoe, where you can play against an AI powered by Minimax algorithm
 
 ## Exemple :
-![alt text](https://artamis.xyz/images/tictactoe.png)
+(https://artamis.xyz/images/tictactoe.png)
 
 
 ## Installation :
