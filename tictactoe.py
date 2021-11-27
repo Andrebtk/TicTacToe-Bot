@@ -36,16 +36,12 @@ def player(board):
     o_count = 0
 
     output = []
-    """
-    print("start player function")
-    print(board)
-    """
+
     #transform a 3d list to a simple list
     for temp in board:
         for elem in temp:
             output.append(elem)
-         
-    #print("output -> " + str(output))
+   
     
     for i in range(len(output)):
         if output[i] == 'X':
@@ -72,25 +68,18 @@ def actions(board):
 
 
     for x in board:
-        """
-        print("x -> " + str(x))
-        print("i -> " + str(i))
-        """
+
         i+=1
         j=-1
         for z in x:
-            """
-            print("j -> " + str(j))
-            print("z -> " + str(z))
-            """
+
             j+=1
 
             if z == None:
                 total+=1
                 cood.add((i,j))
     
-    #print("total None: " + str(total))
-    #print("cood : " + str(cood))
+
 
     return cood
             
@@ -132,11 +121,7 @@ def winner(board):
     for row in board:
         column2.append(row[2])
 
-    """
-    print("column0 -> " + str(column0))
-    print("column1 -> " + str(column1))
-    print("column2 -> " + str(column2))
-    """
+
 
 
     if board[0][0]== X and board[0][1]== X and board[0][2] == X:
@@ -253,80 +238,3 @@ def min_value(board):
                 return v, move
 
     return v, move
-"""
-
-
-def minimax(board):
-
-    def maxValue(board):
-
-        #print("\nmaxValue\n")
-
-        if terminal(board):
-            return utility(board), None
-
-        z = float('-inf')
-        move = None
-        for act in actions(board):
-            #print("act ->" + str(act))
-            value = result(board, act)
-            #print("value -> " + str(value))
-
-            uti, move = miniValue(value)
-            #print("uti -> " + str(uti))
-            #print("move -> " + str(move))
-
-            
-            if uti > z:
-                z = uti
-                move = act
-                if z == 1:
-                    #print("final")
-                    #print("act ->" + str(move))
-                    return z, move
-
-        return z, move
-            
-
-        
-    def miniValue(board):
-
-        #print("\nminiValue\n")
-
-        if terminal(board):
-            return utility(board), None
-
-        z = float('inf')
-        move = None
-        for act in actions(board):
-            #print("act -> " + str(act))
-            value = result(board, act)
-            #print("value -> " + str(value))
-            uti, move = maxValue(value)
-            #print("uti -> " + str(uti))
-            #print("move -> " + str(move))
-
-            if uti < z:
-                z = uti
-                move = act
-                if z == -1:
-                    #print("final")
-                    #print("act ->" + str(move))
-                    return z, move
-            
-
-        return z, move
-        
-
-
-        
-    CurrentPlayer = player(board)
-
-
-    if CurrentPlayer == X:
-        uti, bestMove = maxValue(board)
-        return bestMove
-    else:
-        uti, bestMove = miniValue(board)    
-        return bestMove
-"""
