@@ -14,10 +14,7 @@ board = [[X, O, X],
         [O, EMPTY, X],
         [EMPTY, EMPTY, O]]
 
-print(board[0])
-print(board[1])
-print(board[2])
-print("\n\n")
+
 
 def initial_state():
     """
