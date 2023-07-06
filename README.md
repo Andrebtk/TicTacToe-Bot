@@ -1,4 +1,4 @@
-# TicTacToe using minimax algorithm
+# TicTacToe Bot
 
 Implementation of a game of tictactoe, where you can play against an AI powered by Minimax algorithm
 
